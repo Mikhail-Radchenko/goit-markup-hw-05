@@ -8,7 +8,7 @@
   --background-button-color: #f5f4fa;
   --button-hover-focus: #188ce8;
   --background-section-color: #f5f4fa;
-  --fill-icon: #AFB1B8;
+  --fill-icon: #afb1b8;
 }
 
 .container {
@@ -157,29 +157,28 @@ img {
 .site-nav .current {
   position: relative;
   color: var(--accent-color);
-
 }
 /* Линия под навигацией */
 .site-nav .current::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
 }
-
 
 .header .container {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-portfolio {
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
 }
 
 .header-nav {
@@ -242,7 +241,8 @@ img {
 }
 
 .hero .container {
-  max-width: 696px;}
+  max-width: 696px;
+}
 
 .hero-title {
   display: flex;
@@ -253,6 +253,7 @@ img {
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -262,6 +263,7 @@ img {
   padding: 10px 32px;
   margin: 0 auto;
   border-radius: 4px;
+  border: 0px;
   font-family: "Roboto";
   color: var(--prymari-white-color);
   background-color: var(--button-hover-focus);
@@ -270,7 +272,7 @@ img {
   line-height: 1.88;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -283,84 +285,47 @@ img {
   cursor: pointer;
 }
 
-
 /* Секция 2 */
-.advans-soc-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1200px; ;
-}
-.advans-soc-list {
-  display: flex;
-  justify-content: center;
-}
-
-.advans-soc-item {
-  min-width: 270px;
-  height: 120px;
-  margin-right: auto;
-  background-color: var(--background-section-color);
-}
-
-.advans-soc-item:first-child {
-  margin-left: 0px;
-}
-
-.advans-soc-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #f5f4fa;
-  border-radius: 4px;
-  background-color: var(--background-section-color);
-  margin-bottom: 30px;
-}
-
-.advan-items {
-  display: flex;
-  margin-top: 30px;
-}
 
 .section-graf {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.advans-soc-list {
+  display: flex;
+}
+
+.advans-soc-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.advans-soc-link {
+  background-color: var(--background-section-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
 .item-title {
   margin-bottom: 10px;
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--title-text-color);
 }
 
 .graf {
-  margin-top: 0;
-
-  font-weight: 400;
+  width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--p-text-color);
 }
-
-.advan {
-  display: flex;
-}
-
-.advan .item {
-  min-width: 270px;
-  margin-right: 30px;
-  margin-left: auto;
-}
-
-.advan .item:last-child {
-  margin-right: 0px;
-}
-
 /* Секция 3 */
 
 .section-work {
@@ -383,7 +348,6 @@ img {
 .work-item {
   display: flex;
   position: relative;
-  
 }
 .work-item:not(:last-child) {
   margin-right: 30px;
@@ -397,29 +361,30 @@ img {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    );
-    min-width: 100%;
-    height: 70px;
-     }
+    to right,
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+  min-width: 100%;
+  height: 70px;
+}
 
-  .product-item {
-    padding: 27px 0px;
-     font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-    
-    
-    /* Секция 4 */
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Секция 4 */
 
 .section-staff {
   padding-top: 94px;
@@ -540,7 +505,6 @@ img {
   width: 170px;
   height: 92px;
   margin-left: 30px;
-
 }
 
 .clients-soc-item:first-child {
@@ -554,11 +518,12 @@ img {
   justify-content: center;
   width: 100%;
   height: 100%;
-    border: 1px solid #afb1b8;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
-  background-color: var(--prymari-white-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: var(--prymari-white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-soc-link:hover,
@@ -668,7 +633,6 @@ img {
   align-items: baseline;
 }
 
-
 .footer-soc {
   margin-left: 70px;
 }
@@ -741,10 +705,9 @@ img {
   cursor: pointer;
   opacity: 1;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -762,6 +725,8 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  margin-bottom: 4px;
+  letter-spacing: 0.06em;
   color: var(--primary-text-color);
 }
 .project-graff {
@@ -792,71 +757,62 @@ img {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
-
-.project-item {
-   position: relative;
-  width: 370px;
-  margin: 15px;
-  background: #ffffff;
-  
-}
-
 .project-link {
-transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);}
-
-.project-link:hover,
-.project-link:focus {
   display: block;
-  cursor: pointer;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .project {
   overflow: hidden;
-   padding-top: 20px;
+  padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .project-thumb {
   position: relative;
   overflow: hidden;
-
 }
 
-.project-thumb::before {
-  display: inline-block;
-  content: 'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.';
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: var(--prymari-white-color);
-text-align: left;
-padding: 63px 24px;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);;
+.project-thumb-text {
   position: absolute;
+  top: 0;
+  height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--prymari-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
-.project-item:hover .project-thumb::before {
-  transform: translateY(0%);
-
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project-link:hover .project-thumb-text,
+.project-link:focus .project-thumb-text {
+  transform: translateY(0);
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
 
+.project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
